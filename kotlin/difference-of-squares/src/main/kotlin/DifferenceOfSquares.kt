@@ -1,19 +1,19 @@
 import kotlin.time.times
 
-class Squares(naturalNumbersCount:Int) {
+class Squares(naturalNumbersCount: Int) {
     private val range = 1..naturalNumbersCount
     private val sumOfRange = range.sum()
-//    private val squaresOfRange = range.reduce { elem, _ -> elem * elem }
+    private val squaresOfRange = range.reduce { acc, value -> acc + value * value }
 
-    fun sumOfSquares():Int {
-        TODO("Implement the function to complete the task")
+    fun sumOfSquares(): Int {
+        return squaresOfRange
     }
 
-    fun squareOfSum():Int {
+    fun squareOfSum(): Int {
         return sumOfRange.times(sumOfRange)
     }
 
-    fun difference():Int {
-        TODO("Implement the function to complete the task")
+    fun difference(): Int {
+        return squareOfSum() - sumOfSquares()
     }
 }
