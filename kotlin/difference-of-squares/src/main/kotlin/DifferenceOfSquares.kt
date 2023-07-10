@@ -1,15 +1,19 @@
-class Squares {
-    //TODO: implement proper constructor
+import kotlin.time.times
 
-    fun sumOfSquares() {
+class Squares(naturalNumbersCount:Int) {
+    private val range = 1..naturalNumbersCount
+    private val sumOfRange = range.sum()
+//    private val squaresOfRange = range.reduce { elem, _ -> elem * elem }
+
+    fun sumOfSquares():Int {
         TODO("Implement the function to complete the task")
     }
 
-    fun squareOfSum() {
-        TODO("Implement the function to complete the task")
+    fun squareOfSum():Int {
+        return sumOfRange.times(sumOfRange)
     }
 
-    fun difference() {
+    fun difference():Int {
         TODO("Implement the function to complete the task")
     }
 }
