@@ -1,4 +1,3 @@
-import kotlin.time.times
 
 class Squares(naturalNumbersCount: Int) {
     private val range = 1..naturalNumbersCount
